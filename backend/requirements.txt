@@ -1,0 +1,12 @@
+Flask
+flask-cors
+pandas
+numpy
+nltk
+scikit-learn
+openai
+anthropic
+python-dotenv
+Werkzeug
+requests
+gunicorn

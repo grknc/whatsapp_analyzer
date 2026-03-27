@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: whatsapp-analyzer
+    runtime: python
+    region: frankfurt          # Avrupa sunucusu (daha hızlı TR için)
+    plan: free
+    rootDir: .
+    buildCommand: |
+      cd frontend && npm install && npm run build && cd ..
+      pip install -r backend/requirements.txt
+    startCommand: cd backend && gunicorn app:app --bind 0.0.0.0:$PORT --workers 1 --timeout 120
+    envVars:
+      - key: SECRET_KEY
+        generateValue: true    # Render otomatik oluşturur
+      - key: PRODUCTION
+        value: "true"
+      - key: PYTHON_VERSION
+        value: 3.11.9

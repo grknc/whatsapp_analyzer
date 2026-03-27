@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+*.env
+
+# Node
+node_modules/
+frontend/node_modules/
+
+# Build outputs (Render bunu build eder, commit'e gerek yok)
+backend/static/
+frontend/dist/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Logs
+*.log
+npm-debug.log*
+
+# Uploads (geçici)
+backend/uploads/
+
+# Env dosyaları (API key'leri commit'leme!)
+.env
+.env.local
+backend/.env
+
+# Kişisel dosyalar
+dev-*.md
+start.bat
+start.sh
